@@ -15,8 +15,8 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
 
 由于第三方图床限制，图片 60 天无访问会自动删除，且为公开图床，隐私无法保证，请不要上传任何包含隐私的图片
 
-
-
+******
+#
 #### 核心代码 → @Chara2580
 ~~~JavaScript
 https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/SCDN-CORE-CODE.js
