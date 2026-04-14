@@ -5,8 +5,8 @@
     window.__SCDN_LOADER__ = true;
     
     const CONFIG = {
-        REMOTE_SCRIPT_URL: 'https://github.com/Lezhengan/iirose-scdn-upload/blob/main/function.js',
-        VERSION_URL: 'https://github.com/Lezhengan/iirose-scdn-upload/blob/main/version.json',
+        REMOTE_SCRIPT_URL: 'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/function.js',
+        VERSION_URL: 'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/version.json',
         CACHE_KEY: 'scdn_func_cache',
         CACHE_VER_KEY: 'scdn_func_ver',
         CACHE_TIME_KEY: 'scdn_func_time',
