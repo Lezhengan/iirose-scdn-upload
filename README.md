@@ -18,6 +18,9 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
 ******
 #
 #### 核心代码 → @Chara2580
+
+可花园终端注入使用，无切换UI
+
 ~~~JavaScript
 https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/SCDN-CORE-CODE.js
 ~~~
