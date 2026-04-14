@@ -17,7 +17,7 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
 
 
 
-# *核心代码 → @Chara2580
+# *核心代码* → @Chara2580
 ~~~javascript
 (function() {
     'use strict';
@@ -80,3 +80,4 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
     };
 })();
 ~~~
+本代码遵循*MIT*开源协议
