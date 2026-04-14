@@ -17,6 +17,8 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
 
 
 
-# *核心代码* → @Chara2580
-~~~https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/SCDN-CORE-CODE.js~~~
+#### 核心代码 → @Chara2580
+~~~ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/SCDN-CORE-CODE.js
+~~~
+
 本代码遵循*MIT*开源协议
