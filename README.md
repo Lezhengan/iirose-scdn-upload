@@ -19,10 +19,10 @@ https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/iirose-scdn-upload
 #
 #### 核心代码 → @Chara2580 猹
 
-核心代码可花园终端注入使用，无切换UI
+核心代码是完整js插件，可直接使用
 
 ~~~JavaScript
-https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/SCDN-CORE-CODE.js
+https://cdn.jsdelivr.net/gh/chara2580/WebView-iirose@main/js/猹的图床插件.js
 ~~~
 
 本代码遵循*MIT*开源协议
