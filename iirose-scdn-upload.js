@@ -5,8 +5,15 @@
     window.__SCDN_LOADER__ = true;
     
     const CONFIG = {
-        REMOTE_SCRIPT_URL: 'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/function.js',
-        VERSION_URL: 'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/version.json',
+        // 首选 io（github.io），不可用时降级 jsDelivr
+        REMOTE_SCRIPT_URLS: [
+            'https://lezhengan.github.io/iirose-scdn-upload/function.js',
+            'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/function.js'
+        ],
+        VERSION_URLS: [
+            'https://lezhengan.github.io/iirose-scdn-upload/version.json',
+            'https://cdn.jsdelivr.net/gh/Lezhengan/iirose-scdn-upload@main/version.json'
+        ],
         CACHE_KEY: 'scdn_func_cache',
         CACHE_VER_KEY: 'scdn_func_ver',
         CACHE_TIME_KEY: 'scdn_func_time',
@@ -52,6 +59,21 @@
             .catch(onError);
     };
     
+    // 依次尝试多个地址，全部失败后才走 onError
+    const fetchScriptFrom = (urls, onSuccess, onError) => {
+        const tryNext = (index) => {
+            if (index >= urls.length) {
+                onError(new Error('all sources failed'));
+                return;
+            }
+            fetchScript(urls[index], onSuccess, (err) => {
+                console.warn('[Loader] Source failed, fallback:', urls[index], err.message);
+                tryNext(index + 1);
+            });
+        };
+        tryNext(0);
+    };
+    
     const executeScript = (code) => {
         try {
             if (window.__SCDN_FUNC__) return true;
@@ -85,8 +107,8 @@
     };
     
     const checkVersion = () => {
-        if (!CONFIG.VERSION_URL) return;
-        fetchScript(CONFIG.VERSION_URL, (text) => {
+        if (!CONFIG.VERSION_URLS || !CONFIG.VERSION_URLS.length) return;
+        fetchScriptFrom(CONFIG.VERSION_URLS, (text) => {
             try {
                 const versionInfo = JSON.parse(text);
                 const currentVer = Cache.get(CONFIG.CACHE_VER_KEY);
@@ -145,7 +167,7 @@
         
         // 下载远程脚本
         log('Downloading remote script');
-        fetchScript(CONFIG.REMOTE_SCRIPT_URL,
+        fetchScriptFrom(CONFIG.REMOTE_SCRIPT_URLS,
             (code) => {
                 if (executeScript(code)) {
                     Cache.set(CONFIG.CACHE_KEY, code);
