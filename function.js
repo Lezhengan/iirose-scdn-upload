@@ -355,7 +355,7 @@
                         <button class="ic-btn" id="ic-reset-btn" style="min-height:36px;font-size:12px;padding:0 10px;background:transparent;">重置设置</button>
                     </div>
                 </div>
-                <div class="ic-footer">点击图标收纳/展开 | v1.8.0</div>
+                <div class="ic-footer">点击图标收纳/展开 | v2.3.0</div>
             </div>
         `;
 
