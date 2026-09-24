@@ -225,9 +225,9 @@ function replaceImageUrlsRecursive(node) {
 
     if (node.tagName === 'IMG') {
         // 链接替换，是防止旧有的本地的链接设置的
-        node.src = node.src.replace('http://r.iirose.com/https://img.scdn.io/', 'https://img.scdn.io/');
+        node.src = node.src.replace('http://r.iirose.com/https://esaimg.cdn1.vip/', 'https://esaimg.cdn1.vip/');
         // 火狐适配
-        node.src = node.src.replace('https://r.iirose.com/https://img.scdn.io/', 'https://img.scdn.io/');
+        node.src = node.src.replace('https://r.iirose.com/https://esaimg.cdn1.vip/', 'https://esaimg.cdn1.vip/');
         
         
         if (!node.src.includes('#e')) {
@@ -270,12 +270,12 @@ function replaceImageUrlsAll () {
 
     // 替换图片链接
     images.forEach(function (img) {
-        img.src = img.src.replace('http://r.iirose.com/https://img.scdn.io/', 'https://img.scdn.io/');
+        img.src = img.src.replace('http://r.iirose.com/https://esaimg.cdn1.vip/', 'https://esaimg.cdn1.vip/');
     });
     
     // 替换图片链接
     images.forEach(function (img) {
-        img.src = img.src.replace('https://r.iirose.com/https://img.scdn.io/', 'https://img.scdn.io/');
+        img.src = img.src.replace('https://r.iirose.com/https://esaimg.cdn1.vip/', 'https://esaimg.cdn1.vip/');
     });
 }
 
