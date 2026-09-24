@@ -34,7 +34,7 @@
     const CONFIG = {
         TARGET_KEY: 'file_upload.php',
         NEW_API: 'https://img.scdn.io/api/v1.php',
-        MY_DOMAIN: 'img.scdn.io'
+        MY_DOMAIN: 'esaimg.cdn1.vip'
     };
 
     // ==================== 用户设置持久化配置 ====================
@@ -317,7 +317,7 @@
             </div>
             <div class="ic-content" id="ic-content">
                 <div class="ic-desc"><strong>当前模式：</strong><br><span id="ic-mode-text" style="color:${UI_CONFIG.accentColor}">新图床代理模式</span></div>
-                <div class="ic-mode" id="ic-mode-desc">• 上传至 img.scdn.io</div>
+                <div class="ic-mode" id="ic-mode-desc">• 上传至 esaimg.cdn1.vip</div>
                 <div class="ic-progress" id="ic-progress">
                     <div class="ic-progress-bar"><div class="ic-progress-fill" id="ic-progress-fill"></div></div>
                     <div class="ic-progress-text"><span id="ic-progress-file">-</span><span id="ic-progress-status">准备</span></div>
@@ -473,7 +473,7 @@
                 statusDot.classList.remove('off');
                 modeText.innerHTML = '新图床代理模式';
                 modeText.style.color = UI_CONFIG.accentColor;
-                modeDesc.innerHTML = '• 上传转发至 img.scdn.io';
+                modeDesc.innerHTML = '• 上传转发至 esaimg.cdn1.vip';
                 actionBtn.innerText = '切换回原始图床';
                 actionBtn.classList.add('active');
             } else {
